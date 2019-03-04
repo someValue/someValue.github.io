@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>someValue</title>
+    <description>...</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 04 Mar 2019 21:48:15 +0800</pubDate>
+    <lastBuildDate>Mon, 04 Mar 2019 21:48:15 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>建站</title>
+        <description>&lt;p&gt;macOS:	10.14.2&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;安装Jekyll&lt;/li&gt;
+  &lt;li&gt;克隆主题&lt;/li&gt;
+  &lt;li&gt;发布文章&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;安装中的配置&quot;&gt;安装中的配置&lt;/h5&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# install Ruby gems in home directory to avoid file
+# permissions problems and using sudo.
+# change the default gem path, by adding those lines to your shell config file,
+# .e.g. ~/.bash_profile
+export GEM_HOME=$HOME/gems
+export PATH=$HOME/gems/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;发布文章命令&quot;&gt;发布文章命令&lt;/h5&gt;
+&lt;p&gt;以后写好，只需执行这一条&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Incremental regeneration 可以在命令行中经由 --incremental flag（简写为 -I）启用，
+// 或者在配置文件中写入 incremental: true 启用。
+bundle exec jekyll serve -I
+
+这个命令有点问题，出现异常 把  -I 去掉
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;参考资料&quot;&gt;参考资料:&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jekyllcn.com&quot;&gt;http://jekyllcn.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com&quot;&gt;https://jekyllrb.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/88c9e72978b4&quot;&gt;https://www.jianshu.com/p/88c9e72978b4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://walterlv.com/jekyll/2017/09/15/setup-a-jekyll-blog-1.html&quot;&gt;https://walterlv.com/jekyll/2017/09/15/setup-a-jekyll-blog-1.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;其他&quot;&gt;其他&lt;/h3&gt;
+
+&lt;p&gt;给主题增加一个远程仓库&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git remote add vno-jekyll-copy git@github.com:someValue/vno-jekyll-copy.git
+
+git push -u vno-jekyll-copy master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;忽然发现 访问 GitHub仓库 失败&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -vT git@github.com  
+Permission denied (publickey).
+ssh-add -l
+The agent has no identities.
+ssh-add -K ~/.ssh/id_rsa  执行了没效果 还是The agent has no identities.
+
+发现id_rsa这个文件有问题，重新生成好了 。。。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 04 Mar 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/build-website/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/build-website/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

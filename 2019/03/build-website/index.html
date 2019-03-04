@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>建站</title>
+  <meta name="description" content="macOS:	10.14.2">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="建站">
+  <meta name="twitter:description" content="macOS:	10.14.2">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="建站">
+  <meta property="og:description" content="macOS:	10.14.2">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2019/03/build-website/">
+  <link rel="alternate" type="application/rss+xml" title="someValue" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 someValue 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="someValue logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for someValue" class="blog-button">someValue</a></h1>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">...</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+
+  
+  
+  
+
+  
+
+  <!--
+  RSS
+  <li class="navigation__item">
+    <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+  -->
+
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2019-03-04 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2019-03-04</time> &#8226; <span class="post-meta__tags tags"></span>
+    </div>
+    <h1 class="post-title">建站</h1>
+  </header>
+
+  <section class="post">
+    <p>macOS:	10.14.2</p>
+
+<ol>
+  <li>安装Jekyll</li>
+  <li>克隆主题</li>
+  <li>发布文章</li>
+</ol>
+
+<h5 id="安装中的配置">安装中的配置</h5>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># install Ruby gems in home directory to avoid file
+# permissions problems and using sudo.
+# change the default gem path, by adding those lines to your shell config file,
+# .e.g. ~/.bash_profile
+export GEM_HOME=$HOME/gems
+export PATH=$HOME/gems/bin:$PATH
+</code></pre></div></div>
+
+<h5 id="发布文章命令">发布文章命令</h5>
+<p>以后写好，只需执行这一条</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Incremental regeneration 可以在命令行中经由 --incremental flag（简写为 -I）启用，
+// 或者在配置文件中写入 incremental: true 启用。
+bundle exec jekyll serve -I
+
+这个命令有点问题，出现异常 把  -I 去掉
+</code></pre></div></div>
+
+<h5 id="参考资料">参考资料:</h5>
+
+<p><a href="http://jekyllcn.com">http://jekyllcn.com</a><br />
+<a href="https://jekyllrb.com">https://jekyllrb.com</a><br />
+<a href="https://www.jianshu.com/p/88c9e72978b4">https://www.jianshu.com/p/88c9e72978b4</a><br />
+<a href="https://walterlv.com/jekyll/2017/09/15/setup-a-jekyll-blog-1.html">https://walterlv.com/jekyll/2017/09/15/setup-a-jekyll-blog-1.html</a></p>
+
+<p><br /></p>
+<h3 id="其他">其他</h3>
+
+<p>给主题增加一个远程仓库</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add vno-jekyll-copy git@github.com:someValue/vno-jekyll-copy.git
+
+git push -u vno-jekyll-copy master
+</code></pre></div></div>
+
+<p>忽然发现 访问 GitHub仓库 失败</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -vT git@github.com  
+Permission denied (publickey).
+ssh-add -l
+The agent has no identities.
+ssh-add -K ~/.ssh/id_rsa  执行了没效果 还是The agent has no identities.
+
+发现id_rsa这个文件有问题，重新生成好了 。。。
+</code></pre></div></div>
+
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://localhost:4000/2019/03/build-website/";
+        this.page.identifier = "/2019/03/build-website/";
+    };
+
+    var disqus_shortname = 'someValue';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2019-03-04 生成</span>
+        <span class="footer__copyright">本站采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2019</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>
